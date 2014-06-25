@@ -1,5 +1,5 @@
 include:
-  - postgresql
+  - {{ salt['pillar.get']('gitlab:db_package') }}
 
 gitlab-db:
   postgres_user.present:
