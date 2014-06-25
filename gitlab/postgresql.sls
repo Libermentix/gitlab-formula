@@ -1,6 +1,3 @@
-include:
-  - {{ salt['pillar.get']('gitlab:db_package') }}
-
 gitlab-db:
   postgres_user.present:
     - name: {{ salt['pillar.get']('gitlab:db_user') }}
